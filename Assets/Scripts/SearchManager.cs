@@ -134,9 +134,7 @@ public class SearchManager : MonoBehaviour
         return JsonUtility.FromJson<SearchResult>(jsonData);
     }
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         movieInfoList = new List<MovieInfo>();
         textureCachingDic = new Dictionary<string, Texture>();

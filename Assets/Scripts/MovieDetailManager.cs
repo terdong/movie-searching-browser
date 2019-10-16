@@ -57,6 +57,11 @@ public class MovieDetailManager : MovieButtonManager
         searchManager.GetMovieInfoAndTexture(movieInfo);
     }
 
+    private void Awake()
+    {
+        buttonClickingHistory = new Stack<MovieInfo>();
+    }
+
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -70,14 +75,10 @@ public class MovieDetailManager : MovieButtonManager
         }
 
         movieDetailPanel.SetActive(false);
-
-        buttonClickingHistory = new Stack<MovieInfo>();
     }
 
     private void OnDisable()
     {
         buttonClickingHistory.Clear();
     }
-
-
 }

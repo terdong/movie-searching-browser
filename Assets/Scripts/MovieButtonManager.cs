@@ -244,9 +244,8 @@ public class MovieButtonManager : MonoBehaviour
     {
         buttons = new List<MovieButton>(panel.GetComponentsInChildren<MovieButton>());
         buttonSpareQueue = new Queue<MovieButton>(buttons);
-        buttonActionQueue = new Queue<MovieButton>();
         buttonsOnField = new List<MovieButton>();
-
+        buttonActionQueue = new Queue<MovieButton>();
         InvokeRepeating("UpdateButtons", 0.1f, duration);
     }
 

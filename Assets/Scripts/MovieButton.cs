@@ -58,17 +58,12 @@ public class MovieButton : Button
     void Awake()
     {
         rawImage = GetComponent<RawImage>();
+        RectTransform = GetComponent<RectTransform>();
+        text = GetComponentInChildren<Text>();
     }
     void Start()
     {
-        RectTransform = GetComponent<RectTransform>();
-        //rawImage = GetComponent<RawImage>();
-        text = GetComponentInChildren<Text>();
-
         originPosition = rectTransform.anchoredPosition;
-
-        //rectTransform.localScale = Vector3.zero;
-
         buttonSize = RectTransform.rect.width;
     }
 }
